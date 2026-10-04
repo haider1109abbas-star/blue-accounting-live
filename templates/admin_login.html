@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - Blue. Accounting</title>
+</head>
+
+<body style="margin:0;background:#f8fafc;font-family:Arial,sans-serif;">
+
+    <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;">
+
+        <div style="width:100%;max-width:420px;background:white;border:1px solid #e2e8f0;border-radius:20px;padding:35px;box-shadow:0 15px 50px rgba(0,0,0,0.08);">
+
+            <div style="text-align:center;margin-bottom:30px;">
+
+                <h1 style="margin:0;color:#0f172a;font-size:32px;">
+                    Blue<span style="color:#2563eb;">.</span>
+                </h1>
+
+                <p style="color:#64748b;margin-top:8px;">
+                    Admin Panel Login
+                </p>
+
+            </div>
+
+            {% if message %}
+
+                <div style="background:#fee2e2;color:#b91c1c;padding:12px;border-radius:10px;margin-bottom:20px;text-align:center;">
+                    {{ message }}
+                </div>
+
+            {% endif %}
+
+            <form method="POST">
+
+                <label style="display:block;margin-bottom:7px;color:#334155;font-weight:700;">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter username"
+                    required
+                    style="width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:10px;box-sizing:border-box;margin-bottom:18px;font-size:15px;"
+                >
+
+                <label style="display:block;margin-bottom:7px;color:#334155;font-weight:700;">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                    style="width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:10px;box-sizing:border-box;margin-bottom:22px;font-size:15px;"
+                >
+
+                <button
+                    type="submit"
+                    style="width:100%;background:#2563eb;color:white;padding:14px;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;"
+                >
+                    Login to Admin Panel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
